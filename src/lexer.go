@@ -23,13 +23,11 @@ const (
 	ILLEGAL
 	IDENT
 	INT
-	SEMI // ;
-
-	ADD // +
-	SUB // -
-	MUL // *
-	DIV // /
-
+	SEMI   // ;
+	ADD    // +
+	SUB    // -
+	MUL    // *
+	DIV    // /
 	ASSIGN // =
 )
 
@@ -39,14 +37,11 @@ var tokens = []string{
 	IDENT:   "IDENT",
 	INT:     "INT",
 	SEMI:    ";",
-
-	// Infix ops
-	ADD: "+",
-	SUB: "-",
-	MUL: "*",
-	DIV: "/",
-
-	ASSIGN: "=",
+	ADD:     "+",
+	SUB:     "-",
+	MUL:     "*",
+	DIV:     "/",
+	ASSIGN:  "=",
 }
 
 func (t Token) String() string {
