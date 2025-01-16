@@ -9,3 +9,12 @@ This project will be the compile necessary to transform the language in somethin
 - [ ] Be able arithmetic;
 - [ ] Be able functions;g
 - [ ] Be able structs;
+
+# Grammar
+
+program      -> statement*
+statement    -> expr ';'
+expr         -> term ((ADD | SUB) term)*
+term         -> factor ((MUL | DIV) factor)*
+factor       -> INT | IDENT | '(' expr ')'
+statement    -> (IDENT ASSIGN expr | expr) ';'
